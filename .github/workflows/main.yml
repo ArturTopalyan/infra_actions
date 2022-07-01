@@ -55,7 +55,7 @@ jobs:
           uses: docker/build-push-action@v2 
           with:
             push: true
-            tags: ArturTopalyan/infra_actions:latest
+            tags: arturtopalyan/infra_actions:latest
 
   deploy:
       runs-on: ubuntu-latest
@@ -72,5 +72,5 @@ jobs:
             sudo docker pull ArturTopalyan/infra_actions
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 ArturTopalyan/infra_actions
+            sudo docker run --rm -d -p 5000:5000 arturtopalyan/infra_actions
 
